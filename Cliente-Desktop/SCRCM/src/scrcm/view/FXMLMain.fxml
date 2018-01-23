@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLMainController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Cadastros">
+               <items>
+                  <MenuItem fx:id="menuCadastroBairro" mnemonicParsing="false" onAction="#handleMenuItemCadastroBairro" text="Bairro" />
+                  <MenuItem fx:id="menuCadastroFuncionario" mnemonicParsing="false" onAction="#handleMenuItemCadastroFuncionario" text="Funcionário" />
+                  <MenuItem fx:id="menuCadastroUsuario" mnemonicParsing="false" onAction="#handleMenuItemCadastroUsuario" text="Usuário " />
+                  <MenuItem fx:id="menuCadastroUF" mnemonicParsing="false" onAction="#handleMenuItemCadastroUF" text="UFs" />
+                  <MenuItem fx:id="menuCadastroCidade" mnemonicParsing="false" onAction="#handleMenuItemCadastroCidade" text="Cidades" />
+                  <MenuItem fx:id="menuCadastroEspecialidade" mnemonicParsing="false" onAction="#handleMenuItemCadastroEspecialidade" text="Especialidade" />
+                  <MenuItem fx:id="menuCadastroTipoAbrigo" mnemonicParsing="false" onAction="#handleMenuItemCadastroTipoAbrigo" text="Tipo Abrigo" />
+                  <MenuItem fx:id="menuCadastroFuncao" mnemonicParsing="false" onAction="#handleMenuItemCadastroFuncao" text="Função" />
+                  <MenuItem fx:id="menuCadastroMensagem" mnemonicParsing="false" onAction="#handleMenuCadastroMensagem" text="Mensagem" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Registros">
+               <items>
+                  <MenuItem fx:id="menuAgendamentoVisita" mnemonicParsing="false" onAction="#handleMenuItemAgendamentoVisita" text="Agendamento de Visita" />
+                  <MenuItem mnemonicParsing="false" text="Visita Curral" />
+                  <MenuItem mnemonicParsing="false" text="Visita Abrigo" />
+                  <MenuItem mnemonicParsing="false" text="Recolhimento de Cérebro" />
+                  
+                  <MenuItem fx:id="menuSolicitacaoVisitaTeste" mnemonicParsing="false" onAction="#handleMenuItemSolicitacaoVisita" text="Solicitacao de Visita" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem fx:id="menuRelatorios" mnemonicParsing="false" onAction="#handleMenuItemRelatorioCidades" text="Cidades" />
+                  <MenuItem fx:id="menuRelatorioFuncionario" mnemonicParsing="false" onAction="#handleMenuItemRelatorioFuncionario" text="Funcionários" />
+                  <MenuItem fx:id="menuRelatorioUsuario" mnemonicParsing="false" onAction="#handleMenuItemRelatorioUsuario" text="Usuários" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" />
+   </children>
+</VBox>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneRelatorioFuncionarioController">
+   <children>
+      <TableView fx:id="tableViewFuncionario" layoutX="77.0" layoutY="100.0" prefHeight="300.0" prefWidth="453.0">
+        <columns>
+          <TableColumn fx:id="tableColumnFuncionario" prefWidth="128.0" text="Funcionário" />
+          <TableColumn fx:id="tableColumnEspecialidade" prefWidth="147.0" text="Especialidade" />
+            <TableColumn fx:id="tableColumnFuncao" prefWidth="177.0" text="Função" />
+        </columns>
+      </TableView>
+      <Label layoutX="233.0" layoutY="38.0" text="Relatório de Funcionários" />
+   </children>
+</AnchorPane>

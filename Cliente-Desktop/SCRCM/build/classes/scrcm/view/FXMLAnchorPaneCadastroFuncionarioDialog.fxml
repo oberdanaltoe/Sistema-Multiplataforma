@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.mascara.util.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneCadastroFuncionarioDialogController">
+   <children>
+      <Group layoutX="73.0" layoutY="139.0">
+         <children>
+            <Button fx:id="btnCancelar" layoutX="514.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonCancelar" text="Cancelar" />
+            <Button fx:id="btnAlterar" layoutX="396.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" text="Cadastrar/Alterar" />
+         </children>
+      </Group>
+      <ComboBox fx:id="comboBoxEspecialidade" layoutX="159.0" layoutY="318.0" prefHeight="25.0" prefWidth="267.0" />
+      <ComboBox fx:id="comboBoxFuncao" layoutX="159.0" layoutY="280.0" prefHeight="25.0" prefWidth="267.0" />
+      <Label layoutX="62.0" layoutY="322.0" text="Especialidade :" />
+      <Label layoutX="93.0" layoutY="284.0" text="Função :" />
+      <Label layoutX="35.0" layoutY="139.0" text="Nome Funcionário :" />
+      <TextField fx:id="textFieldNomeFuncionario" layoutX="161.0" layoutY="135.0" prefHeight="25.0" prefWidth="267.0" />
+      <Label layoutX="185.0" layoutY="33.0" text="Manutenção de Cadastros">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="213.0" text="E-mail :" />
+      <Label layoutX="101.0" layoutY="246.0" text="Senha :" />
+      <Label layoutX="107.0" layoutY="178.0" text="CPF :" />
+      <TextField fx:id="textFieldCPFFuncionario" layoutX="160.0" layoutY="174.0" prefHeight="25.0" prefWidth="267.0" />
+      <TextField fx:id="textFieldLoginFuncionario" layoutX="160.0" layoutY="209.0" prefHeight="25.0" prefWidth="267.0" />
+      <PasswordField fx:id="textFieldSenhaFuncionario" layoutX="160.0" layoutY="242.0" prefHeight="25.0" prefWidth="267.0" />
+   </children>
+</AnchorPane>

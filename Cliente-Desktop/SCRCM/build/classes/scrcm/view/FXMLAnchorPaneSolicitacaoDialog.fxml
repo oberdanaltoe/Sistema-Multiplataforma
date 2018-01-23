@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.mascara.util.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneSolicitacaoDialogController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="674.0" prefWidth="746.0">
+         <children>
+            <Label layoutX="256.0" layoutY="14.0" text="Solicitar Visita">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Group layoutX="31.0" layoutY="66.0">
+               <children>
+                  <Button fx:id="btnEnviar" layoutX="501.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" text="Enviar" />
+                  <Button fx:id="btnCancelar" layoutX="561.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleButtonCancelar" text="Cancelar" />
+               </children>
+            </Group>
+            <ComboBox fx:id="comboxPossuiProdiedade" layoutX="504.0" layoutY="89.0" prefHeight="25.0" prefWidth="218.0" />
+            <Label fx:id="pergunta01" layoutX="25.0" layoutY="93.0" text="01" />
+            <Label fx:id="pergunta03" layoutX="25.0" layoutY="160.0" text="03" />
+            <MaskTextField fx:id="textFieldAnimaisMordidos" layoutX="504.0" layoutY="156.0" prefHeight="25.0" prefWidth="218.0" />
+            <Label fx:id="pergunta04" layoutX="25.0" layoutY="194.0" text="04" />
+            <ComboBox fx:id="comboxCasosMorteRegiao" layoutX="504.0" layoutY="190.0" onAction="#CasosMorte" prefHeight="25.0" prefWidth="218.0" />
+            <Label fx:id="pergunta05" layoutX="25.0" layoutY="228.0" text="05" visible="false" />
+            <ComboBox fx:id="comboxPropriedadeLocaisProximos" layoutX="504.0" layoutY="224.0" prefWidth="150.0" visible="false" />
+            <Label fx:id="pergunta06" layoutX="25.0" layoutY="262.0" text="06" visible="false" />
+            <Label fx:id="pergunta07" layoutX="25.0" layoutY="296.0" prefHeight="15.0" prefWidth="486.0" text="07" />
+            <Label fx:id="pergunta08" layoutX="25.0" layoutY="330.0" text="08" visible="false" />
+            <Label fx:id="pergunta09" layoutX="42.0" layoutY="515.0" text="09" visible="false" />
+            <ComboBox fx:id="comboxTempoOcorridoMorte" layoutX="504.0" layoutY="258.0" prefWidth="150.0" visible="false" />
+            <Label fx:id="pergunta02" layoutX="25.0" layoutY="126.0" text="02" />
+            <MaskTextField fx:id="textFieldMediaAnimaisPropriedade" layoutX="504.0" layoutY="122.0" prefHeight="25.0" prefWidth="218.0" />
+            <ComboBox fx:id="comboxSolicitarRecolhimentoCer" layoutX="517.0" layoutY="511.0" prefWidth="150.0" visible="false" />
+            <Label fx:id="pergunta10" layoutX="42.0" layoutY="545.0" text="10" />
+            <TextArea fx:id="textAreaObservacoes" layoutX="45.0" layoutY="565.0" prefHeight="63.0" prefWidth="459.0" />
+            <ComboBox fx:id="comboxConheceAbrigo" layoutX="504.0" layoutY="288.0" onAction="#ConheceAbrigo" prefHeight="25.0" prefWidth="218.0" />
+            <ComboBox fx:id="comboxTipoAbrigo" layoutX="32.0" layoutY="347.0" prefHeight="25.0" prefWidth="174.0" visible="false" />
+            <ListView fx:id="listViewAbrigos" layoutX="282.0" layoutY="352.0" prefHeight="103.0" prefWidth="218.0" visible="false" />
+            <Button fx:id="btnAddAbrigo" layoutX="216.0" layoutY="347.0" mnemonicParsing="false" onAction="#handlleAdicionar" text="+" visible="false" />
+            <Label fx:id="pergunta11" layoutX="25.0" layoutY="59.0" text="11" />
+            <ComboBox fx:id="comboxUsuarioComum" layoutX="504.0" layoutY="55.0" prefHeight="25.0" prefWidth="218.0" />
+            <Label fx:id="pergunta12" layoutX="42.0" layoutY="483.0" text="12" />
+            <Button fx:id="btnFoto" layoutX="559.0" layoutY="479.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Escolher Foto" />
+            <Button fx:id="btnLimpar" layoutX="667.0" layoutY="616.0" mnemonicParsing="false" onAction="#handleLimparTela" text="Limpar" />
+            <Button fx:id="btnRemoveAbrigo" layoutX="249.0" layoutY="347.0" mnemonicParsing="false" onAction="#handlleRemover" prefHeight="25.0" prefWidth="25.0" text="-" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

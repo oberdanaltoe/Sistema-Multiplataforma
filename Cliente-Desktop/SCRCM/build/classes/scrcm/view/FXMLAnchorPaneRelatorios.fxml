@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneRelatoriosController">
+   <children>
+      <TableView fx:id="tableViewCidade" layoutX="141.0" layoutY="88.0" prefHeight="375.0" prefWidth="319.0">
+         <columns>
+            <TableColumn fx:id="tableColumnCodCidade" prefWidth="106.0" text="Código" />
+            <TableColumn fx:id="tableColumnCidade" prefWidth="212.0" text="Cidades" />
+         </columns>
+      </TableView>
+      <Label layoutX="211.0" layoutY="40.0" text="Relatório de Cidades Cadastradas" />
+   </children>
+</AnchorPane>

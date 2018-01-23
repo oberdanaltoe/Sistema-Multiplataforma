@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="scrcm.controller.FXMLAnchorPaneCadastroFuncionarioController">
+   <children>
+      <SplitPane dividerPositions="0.3202614379084967" prefHeight="405.0" prefWidth="619.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableViewFuncionario" layoutX="1.0" prefHeight="398.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnFuncionario" prefWidth="199.0" text="Funcionários" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="23.0" layoutY="141.0" prefHeight="90.0" prefWidth="329.0">
+                     <children>
+                        <Label text="Funcionário :" />
+                        <Label text="Função :" GridPane.rowIndex="1" />
+                        <Label fx:id="labelFuncionarioNome" prefHeight="17.0" prefWidth="261.0" GridPane.columnIndex="1" />
+                        <Label fx:id="labelFuncionarioFuncao" prefHeight="17.0" prefWidth="254.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Especialidade :" GridPane.rowIndex="2" />
+                        <Label fx:id="labelFuncionarioEspecialidade" prefHeight="17.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="0.0" prefWidth="102.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="227.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="83.0" layoutY="55.0" text="Manutenção de Cadastros">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Group />
+                  <Button fx:id="btnCadastrar" layoutX="114.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleButtonInserir" text="Cadastrar" />
+                  <Button fx:id="btnAlterar" layoutX="195.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleButtonAlterar" text="Alterar" />
+                  <Button fx:id="btnExcluir" layoutX="263.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleButtonExcluir" text="Excluir" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

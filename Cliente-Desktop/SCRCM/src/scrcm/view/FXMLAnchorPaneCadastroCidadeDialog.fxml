@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneCadastroCidadeDialogController">
+   <children>
+      <Label layoutX="130.0" layoutY="73.0" text="Manutenção de Cadastros">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Group>
+         <children>
+            <TextField fx:id="textFieldFuncaoNome" layoutX="164.0" layoutY="150.0" prefHeight="25.0" prefWidth="254.0" />
+            <Label layoutX="90.0" layoutY="186.0" text="UF Cidade :" />
+            <Label layoutX="81.0" layoutY="154.0" text="Nome Cidade :" />
+            <ComboBox fx:id="comboBoxUF" layoutX="164.0" layoutY="182.0" prefHeight="25.0" prefWidth="115.0" />
+         </children>
+      </Group>
+      <Group layoutX="-157.0" layoutY="-9.0">
+         <children>
+            <Button fx:id="btnAlterar" layoutX="386.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" text="Cadastrar/Alterar" />
+            <Button fx:id="btnCancelar" layoutX="504.0" layoutY="295.0" mnemonicParsing="false" text="Cancelar" />
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

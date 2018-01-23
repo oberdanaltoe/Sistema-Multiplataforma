@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneCadastroFuncaoDialogController">
+   <children>
+      <Group>
+         <children>
+            <Button fx:id="btnCancelar" layoutX="336.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonCancelar" text="Cancelar" />
+            <Button fx:id="btnAlterar" layoutX="206.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" text="Cadastrar/Alterar" />
+         </children>
+      </Group>
+      <GridPane layoutX="76.0" layoutY="154.0" prefHeight="60.0" prefWidth="322.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="92.0" text="Nome Função :" />
+            <TextField fx:id="textFieldFuncaoNome" GridPane.columnIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="88.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="238.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="116.0" layoutY="50.0" text="Manutenção de Cadastros">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

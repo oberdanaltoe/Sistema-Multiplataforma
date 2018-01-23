@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrcm.controller.FXMLAnchorPaneAgendamentoDialogController">
+   <children>
+      <GridPane layoutX="11.0" layoutY="65.0" prefHeight="254.0" prefWidth="401.0">
+         <children>
+            <Label text="Tipo de Visita:" GridPane.rowIndex="2" />
+            <Label text="Data:" GridPane.rowIndex="3" />
+            <Label text="Cidade:" GridPane.rowIndex="4" />
+            <Label text="Rua:" GridPane.rowIndex="7" />
+            <Label text="Número:" GridPane.rowIndex="6" />
+            <Label text="Bairro:" GridPane.rowIndex="5" />
+            <TextField fx:id="textFieldNumero" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="textFieldRua" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <DatePicker fx:id="datePickerAgendamento" prefHeight="25.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="comboxTipoVisita" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Produtor:" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldCidade" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="textFieldBairro" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboxSolicitacao" onAction="#selecionarComboBoxViewSolicitacao" prefHeight="25.0" prefWidth="337.0" GridPane.columnIndex="1" />
+            <Label text="Solicitação:" />
+            <TextField fx:id="textFieldProdutor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="86.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="10.0" prefWidth="317.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Group layoutX="234.0" layoutY="7.0">
+         <children>
+            <Button fx:id="btnCancelar" layoutX="347.0" layoutY="464.0" mnemonicParsing="false" onAction="#handleButtonCancelar" prefHeight="25.0" prefWidth="67.0" text="Cancelar" />
+            <Button fx:id="btnCadastrar" layoutX="202.0" layoutY="464.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" prefHeight="25.0" prefWidth="80.0" text="Cadastrar" />
+         </children>
+      </Group>
+      <Label layoutX="13.0" layoutY="351.0" text="Funcionarios" />
+      <Button fx:id="btnAddFunconario" layoutX="345.0" layoutY="347.0" mnemonicParsing="false" onAction="#handlleAdicionarFuncionario" prefHeight="25.0" prefWidth="28.0" text="+" />
+      <ListView fx:id="listViewFuncionarios" layoutX="94.0" layoutY="383.0" prefHeight="157.0" prefWidth="315.0" />
+      <Label layoutX="269.0" layoutY="25.0" text="Registrar Agendamento" />
+      <Button fx:id="btnRemoveFunconario" layoutX="383.0" layoutY="347.0" mnemonicParsing="false" onAction="#handlleRemover" prefHeight="25.0" prefWidth="28.0" text="-" />
+      <ComboBox fx:id="comboxFuncionarios" layoutX="94.0" layoutY="347.0" prefHeight="25.0" prefWidth="240.0" />
+   </children>
+</AnchorPane>
