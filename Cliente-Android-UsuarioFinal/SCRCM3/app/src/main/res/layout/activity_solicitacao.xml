@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:weightSum="1"
+    tools:context="scrcm.com.scrcm.activity.SolicitacaoActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Solicitação de Visita"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="34dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Possui Propriedade?" />
+
+            <Spinner
+                android:id="@+id/spnPossuiPropiedade"
+                android:layout_width="match_parent"
+                android:layout_height="37dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantidade Média de Animais?" />
+
+            <EditText
+                android:id="@+id/edtQtdMediaAnimais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantos animais foram mordidos?" />
+
+            <EditText
+                android:id="@+id/edtQtdAnimaisMordidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Houve casos de morte de animais por raíva na região?" />
+
+            <Spinner
+                android:id="@+id/spnMorteRegiao"
+                android:layout_width="match_parent"
+                android:layout_height="42dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Na propriedade ou locais proximos?"
+                />
+
+            <Spinner
+                android:id="@+id/spnPropriedadeLocaisProx"
+                android:layout_width="match_parent"
+                android:layout_height="46dp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quanto tempo do ocorrido da morte aproximadamente?" />
+
+            <Spinner
+                android:id="@+id/spnTempoOcorrido"
+                android:layout_width="match_parent"
+                android:layout_height="42dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Existe conhecimento de abrigos de morcegos na propriedade ou locais proximos?" />
+
+            <Spinner
+                android:id="@+id/spnConheceAbrigo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abrigos" />
+
+            <CheckBox
+                android:id="@+id/cbOcoArvore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ocos de Árvores" />
+
+            <CheckBox
+                android:id="@+id/cbCasaVelha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Casa Velha" />
+
+            <CheckBox
+                android:id="@+id/cbCaverna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cavernas" />
+
+            <CheckBox
+                android:id="@+id/cbTuneuTrem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Túnel de trem" />
+
+            <CheckBox
+                android:id="@+id/cbForroCasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forro de Casa" />
+
+            <CheckBox
+                android:id="@+id/cbBueiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bueiro" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deseja Solicitar Recolimento de Cérebro?" />
+
+            <Spinner
+                android:id="@+id/spSolRecolhimentoCer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observações:" />
+
+            <EditText
+                android:id="@+id/edtObservacoes"
+                android:layout_width="match_parent"
+                android:layout_height="101dp"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17"
+                android:onClick="inserirSolicitacao"
+                android:text="Salvar" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/btnLimparTela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="limparTela"
+                android:text="Limpar Tela" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Cancelar"
+                android:text="Cancelar" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

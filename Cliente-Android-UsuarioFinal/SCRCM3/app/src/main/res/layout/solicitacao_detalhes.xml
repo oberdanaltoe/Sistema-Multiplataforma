@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="15dp"
+        android:text="Solicitação de Visita"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data da Solicitação: "
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtData"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:ems="10"
+                android:inputType="text"
+                tools:background="@color/comboboxColor" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Possui Propriedade?"
+                android:textColor="@android:color/background_dark"
+                 />
+
+            <TextView
+                android:id="@+id/edtPossuiPropriedadeDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:ems="10"
+                android:inputType="text"
+                tools:background="@color/comboboxColor" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantidade Média de Animais?"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/edtQtdMediaAnimaisDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantos animais foram mordidos?"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtQtdAnimaisMordidosDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Houve casos de morte de animais por raíva na região?"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtCasosdeMorteDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Na propriedade ou locais proximos?"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtPropriedadeLocaisDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quanto tempo do ocorrido da morte aproximadamente?"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtTempoOcorridoDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Existe conhecimento de abrigos de morcegos na propriedde ou locais proximos?"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtConheceAbrigoDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deseja Solicitar Recolimento de Cérebro?"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtSolicitarRecolhimentoDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observações:"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/edtObservacoesDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/comboboxColor"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/btnVoltarDetalhes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17"
+                android:onClick=""
+                android:text="Voltar" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
