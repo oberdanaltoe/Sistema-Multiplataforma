@@ -6,3 +6,6 @@ As aplicações clientes possuem recursos da Api Google Maps, assim podemos cada
 Esse sistema foi desenvolvido como TCC.
 
 Mais funcionalidades podem ser implementadas e incorporadas ao sistema bem como aperfeiçoamento de funções.
+
+Os arquivos do banco de dados estão na pasta, Banco-DadosFicticios, a ferramenta usada foi o Mysql
+
