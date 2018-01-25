@@ -1,0 +1,542 @@
+===Base de Dados banco_idaf_javafx
+
+== Estrutura da tabela abrigo
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_abrigo**//|int(11)|Não|
+|//**cod_tipo_abrigo**//|int(11)|Não|
+|longitude|decimal(11,8)|Sim|NULL
+|latitude|decimal(11,8)|Sim|NULL
+|ponto_referencia|varchar(100)|Sim|NULL
+== Extraindo dados da tabela abrigo
+
+|12|1|-40.99661636|-20.75725937|teste 
+|15|1|-40.99670410|-20.75718498|teste novo
+|17|1|-41.15498352|-20.80293846|ifes
+|21|1|0.00000000|0.00000000|hff
+|22|1|-41.15467834|-20.80275154|Ifes bloco 4
+|24|1|-41.10707092|-20.85113716| 
+|25|1|-41.11952972|-20.98884773|teste
+|23|2|-41.10707092|-20.85113716|Matriz velha
+|10|3|-41.05233002|-20.76125717|teste
+|18|3|-41.15496826|-20.80311203|Ifes 2
+|19|3|-41.17299271|-20.96897507|perto da igreja
+|6|4|-41.05233002|-20.76125717|linha x
+|14|4|-41.01517487|-20.71759033|Perto de Vargem Alta 
+|7|5|-41.05233002|-20.76125717|Árvore de Pinho ao lado
+|8|6|-41.05233002|-20.76125717|Casa laranja antiga
+|9|8|-41.05233002|-20.76125717|Curral do Santo Antonio
+|20|8|-41.14501572|-20.96565628|na reta do Becka
+== Estrutura da tabela agendamento_visita
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_agendamento_visita**//|int(11)|Não|
+|rua|varchar(50)|Não|
+|numero|int(11)|Não|
+|tipo_visita|varchar(50)|Sim|NULL
+|data|date|Sim|NULL
+|longitude|float|Sim|NULL
+|latitude|float|Sim|NULL
+|cod_funcionario|int(11)|Sim|NULL
+|cod_bairro|int(11)|Não|
+|cod_solicitacao|int(11)|Sim|NULL
+|status|int(11)|Não|
+== Extraindo dados da tabela agendamento_visita
+
+|35|Teste|98|Visita em Abrigo|2018-09-14|0|0|NULL|2|67|2
+|37|Limeira|4|Visita de Recolhimento de Cerebro|2017-10-02|0|0|NULL|1|118|2
+|39|Limeira|4|Visita em Abrigo|2017-10-04|0|0|NULL|1|59|2
+|42|Teste|98|Visita de Recolhimento de Cerebro|2017-10-03|0|0|NULL|2|67|2
+|49|Limeira|4|Visita em Curral|2017-10-18|0|0|NULL|1|64|2
+|50|Limeira|4|Visita em Abrigo|2017-10-05|0|0|NULL|1|69|2
+|51|Teste|98|Visita em Abrigo|2017-10-27|0|0|NULL|2|130|2
+|52|Limeira|4|Visita de Recolhimento de Cerebro|2017-10-27|0|0|NULL|1|132|2
+|53|Limeira|4|Visita de Recolhimento de Cerebro|2017-10-30|0|0|NULL|1|131|2
+|54|Limeira|4|Visita de Recolhimento de Cerebro|2017-11-01|0|0|NULL|1|133|2
+|55|Teste   345|888|Visita em Abrigo|2017-10-31|0|0|NULL|3|135|1
+|56|Limeira|4|Visita em Curral|2017-10-30|0|0|NULL|1|134|1
+|57|Limeira|4|Visita em Abrigo|2017-11-17|0|0|NULL|1|144|1
+== Estrutura da tabela bairro
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_bairro**//|int(11)|Não|
+|nome_bairro|varchar(45)|Não|
+|cod_cidade|int(11)|Não|
+== Extraindo dados da tabela bairro
+
+|1|Jaciguá|2
+|2|Boa Esperança|2
+|3|Aeroporto|4
+|4|Corrego Mônos|4
+|5|Teste|4
+== Estrutura da tabela captura
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_captura**//|int(11)|Não|
+|longitude|float|Sim|NULL
+|latitude|float|Sim|NULL
+|qtd_morcegos_capturados|int(11)|Não|
+|cod_abrigo|int(11)|Não|
+|qtd_morcegos_tratados|int(11)|Não|
+|qtd_morcegos_enviados_laboratorio|int(11)|Não|
+|data_captura|date|Não|
+|cod_visita|int(11)|Sim|NULL
+== Extraindo dados da tabela captura
+
+|3|-41.173|-20.969|5|9|1|2|2017-09-25|12
+|4|-41.173|-20.969|6|15|1|1|2017-09-25|9
+|5|-41.173|-20.969|21|19|1|2|2017-09-25|26
+|6|-41.145|-20.9657|3|20|1|2|2017-09-25|11
+|7|-41.145|-20.9657|2|20|1|1|2017-09-25|26
+|8|-40.9966|-20.7573|8|15|2|3|2017-09-25|10
+|9|-40.9966|-20.7574|5|18|1|1|2017-10-02|28
+|10|-41.1547|-20.803|6|18|1|2|2017-10-02|27
+|11|-40.9968|-20.7574|8|21|1|1|2017-10-25|29
+|12|-40.9965|-20.7575|3|12|0|1|2017-10-25|31
+|13|-41.1448|-20.9658|5|20|1|2|2017-10-26|30
+|14|-41.1071|-20.8512|3|24|3|0|2017-10-27|32
+|15|-41.1195|-20.9888|5|25|5|6|2017-11-13|NULL
+== Estrutura da tabela cidade
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_cidade**//|int(11)|Não|
+|nome_cidade|varchar(60)|Não|
+|UF|char(2)|Não|
+== Extraindo dados da tabela cidade
+
+|2|Vargem Alta|ES
+|3|Vitória|ES
+|4|Cachoeiro de Itapemirim|ES
+|6|Serra|ES
+|8|São Paulo|SP
+|11|Alágoas|PI
+|15|Iconhas|ES
+|16|Outro Teste|AM
+|17|Teresina |PE
+== Estrutura da tabela clientes
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cdCliente**//|int(11)|Não|
+|nome|varchar(50)|Não|
+|cpf|varchar(14)|Não|
+== Extraindo dados da tabela clientes
+
+|2|Cliente Alterar|111.222.333-44
+|3|Cliente Inserir|111.222.333-44
+|4|Cliente Android|11231231263
+== Estrutura da tabela especialidade_funcionario
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_especialidade**//|int(11)|Não|
+|desc_especialidade|varchar(50)|Não|
+== Extraindo dados da tabela especialidade_funcionario
+
+|6|Geologo
+|7|Veterinário
+|8|Agronomo
+|9|Técnico Agricola
+== Estrutura da tabela especie_morcego
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_especie**//|int(11)|Não|
+|nome_especie|varchar(50)|Não|
+|cod_habito_alimentar|int(11)|Não|
+|cod_genero|int(11)|Não|
+== Extraindo dados da tabela especie_morcego
+
+== Estrutura da tabela familia_morcego
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_familia**//|int(11)|Não|
+|nome_familia|varchar(50)|Não|
+== Extraindo dados da tabela familia_morcego
+
+|2|Familias
+== Estrutura da tabela funcao_funcionario
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_funcao**//|int(11)|Não|
+|desc_funcao|varchar(50)|Não|
+== Extraindo dados da tabela funcao_funcionario
+
+|7|Funcionário
+|8|Coordenador
+== Estrutura da tabela funcionario
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_funcionario**//|int(11)|Não|
+|nome|varchar(30)|Não|
+|login|varchar(100)|Não|
+|senha|varchar(40)|Não|
+|**cpf**|char(11)|Não|
+|cod_funcao|int(11)|Não|
+|cod_especialidade|int(11)|Não|
+== Extraindo dados da tabela funcionario
+
+|2|Oberdan|oberdan@gmail.com|202cb962ac59075b964b07152d234b70|14345411778|7|6
+|3|Andre|andre@gmail.com|202cb962ac59075b964b07152d234b70|12323422133|7|7
+|4|Erick|erick@gmail.com|202cb962ac59075b964b07152d234b70|12332122311|7|8
+|5|Usuario Teste|coordenador@gmail.com|7363a0d0604902af7b70b271a0b96480|12312312640|7|6
+== Estrutura da tabela funcionario_agenda
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_funcionario**//|int(11)|Não|
+|//**cod_agendamento_visita**//|int(11)|Não|
+== Extraindo dados da tabela funcionario_agenda
+
+|2|49
+|2|51
+|2|56
+|3|39
+|3|49
+|3|50
+|3|51
+|3|52
+|3|53
+|3|54
+|4|37
+|4|52
+|4|54
+|4|55
+|4|56
+|4|57
+|5|42
+|5|49
+|5|55
+|5|57
+== Estrutura da tabela genero_morcego
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_genero**//|int(11)|Não|
+|nome_genero|varchar(50)|Não|
+|cod_familia|int(11)|Não|
+== Extraindo dados da tabela genero_morcego
+
+== Estrutura da tabela habito_alimentar_morcego
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_habito_alimentar**//|int(11)|Não|
+|desc_habito_alimentar|varchar(50)|Não|
+== Extraindo dados da tabela habito_alimentar_morcego
+
+|1|Hematofago
+== Estrutura da tabela mensagens
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_mensagem**//|int(11)|Não|
+|titulo|varchar(70)|Não|
+|mensagem|varchar(250)|Não|
+|data_expira|date|Não|
+== Extraindo dados da tabela mensagens
+
+|1|Mensagem Teste|Essa é uma mensagem teste|2017-10-01
+|2|Nova mensagem|Nova mesagem teste de alteração|2017-10-01
+|3|Vacinação de Raiva|VAcinação ......|2017-10-31
+== Estrutura da tabela recolhimento_cerebro
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_recolhimento_cerebro**//|int(11)|Não|
+|longitude|float|Sim|NULL
+|latitude|float|Sim|NULL
+|animal_morto|varchar(15)|Não|
+|data|date|Sim|NULL
+|cod_visita|int(11)|Sim|NULL
+|estado_carcaca|varchar(30)|Não|
+== Extraindo dados da tabela recolhimento_cerebro
+
+|3|-40.9966|-20.7573|Cachorro|2017-09-26|11|Inicial
+|4|-41.0152|-20.7176|Bovino|2017-10-02|26|Putrefação
+|5|-41.1547|-20.8028|Bovino|2017-10-02|27|Inicial
+|6|-40.9966|-20.7573|Gato|2017-10-10|28|Putrefação Escura
+|7|-40.9968|-20.7574|Cachorro|2017-10-25|29|Inicial
+|8|-41.1448|-20.9657|Bovino|2017-10-26|30|Putrefação Escura
+|9|-41.1071|-20.8512|Bovino|2017-10-27|31|Putrefação Escura
+== Estrutura da tabela solicitacao_visita
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_solicitacao_visita**//|int(11)|Não|
+|status|int(11)|Sim|NULL
+|possui_propriedade|varchar(15)|Não|
+|solicitar_recolhimento_cerebro|varchar(15)|Sim|NULL
+|qtd_media_animais|int(11)|Não|
+|qtd_animais_mordidos|int(11)|Não|
+|casos_morte_regiao|varchar(15)|Não|
+|proprie_locais_proximos|varchar(60)|Sim|NULL
+|tempo_ocorrido_morte|varchar(60)|Sim|NULL
+|existe_abrigo_morcego|varchar(15)|Não|
+|observacoes|varchar(200)|Sim|NULL
+|foto|varchar(200)|Sim|NULL
+|cod_usuario|int(11)|Sim|NULL
+|data_solcicitacao|date|Sim|NULL
+== Extraindo dados da tabela solicitacao_visita
+
+|59|2|Sim|NULL|3|1|NÃ£o|NULL|NULL|Sim|tese| Em produÃ§Ã£o |1|0000-00-00
+|63|1|Sim|NÃ£o|5|4|Sim|Propriedade|NULL|Sim|asda| Em produÃ§Ã£o |1|NULL
+|64|2|Sim|Sim|45|34|Sim|Propriedade|Menos de uma Semana|Sim|sdf| Em produção |1|2017-09-05
+|65|1|Sim|Sim|6|5|Sim|Propriedade|NULL|Sim| | Em produÃ§Ã£o |1|NULL
+|66|1|Sim|NULL|56|4|NÃ£o|NULL|NULL|NÃ£o|ads| Em produÃ§Ã£o |1|NULL
+|67|2|Sim|Sim|56|34|Sim|Propriedade|Menos de uma Semana|NÃ£o|345| Em produção |2|2017-09-15
+|69|2|Sim|NÃ£o|45|4|Sim|Propriedade|NULL|NÃ£o|sdf| Em produção |1|2017-09-04
+|70|1|Sim|Sim|6|5|Sim|Propriedade|NULL|Sim|rty| Em produÃ§Ã£o |1|NULL
+|71|1|Sim|NÃ£o|6|7|Sim|Propriedade|NULL|NÃ£o|sdf| Em produÃ§Ã£o |1|NULL
+|72|1|Sim|NULL|7|6|NÃ£o|NULL|NULL|Sim|65| Em produÃ§Ã£o |1|NULL
+|73|1|Sim|Sim|7|6|Sim|Propriedade|NULL|NÃ£o|67| Em produÃ§Ã£o |1|NULL
+|76|1|Sim|NULL|5|3|Não|NULL|NULL|Sim|erre| Em produção |1|NULL
+|77|1|Sim|NULL|34|2|Não|NULL|NULL|Sim|sdfssdf| Em produção |1|NULL
+|78|1|Sim|Não|34|2|Sim|Propriedade|Menos de uma Semana|Sim|sdfsdf| Em produção |1|NULL
+|79|1|Sim|NULL|45|3|Não|NULL|NULL|Sim|srsr| Em produção |1|NULL
+|80|2|Sim|NULL|45|3|Não|NULL|NULL|Sim|srs| Em produção |1|NULL
+|81|1|Sim|NULL|6|5|Não|NULL|NULL|Sim|hhh| Em produção |1|NULL
+|82|1|Sim|NULL|65|4|Não|NULL|NULL|Sim|trtyrt| Em produção |1|NULL
+|83|1|Sim|NULL|56|4|Não|NULL|NULL|Sim|wwwwww| Em produção |1|NULL
+|84|1|Sim|NULL|67|5|Não|NULL|NULL|Sim|fhjfhj| Em produção |1|NULL
+|85|1|Sim|NULL|56|4|Não|NULL|NULL|Sim|trhytyh| Em produção |1|NULL
+|86|1|Sim|NULL|23|2|Não|NULL|NULL|Não|asd| Em produção |1|NULL
+|87|1|Sim|NULL|34|2|Não|NULL|NULL|Sim|sdas| Em produção |1|NULL
+|88|1|Sim|NULL|34|3|Não|NULL|NULL|Sim|asd| Em produção |3|NULL
+|89|1|Sim|NULL|56|4|Não|NULL|NULL|Sim|asd| Em produção |1|NULL
+|90|1|Não|Não|56|4|Sim|Propriedade|Menos de uma Semana|Não|asd| Em produção |5|NULL
+|91|1|Não|NULL|45|4|Não|NULL|NULL|Sim|teste| Em produção |1|NULL
+|99|1|Sim|Não|65|5|Sim|Propriedade|Duas Semanas|Sim|jhffyhjn|NULL|1|NULL
+|100|1|Sim|Não|25|5|Sim|Propriedade|Mais de um mês|Sim|Montgomeryhhf|NULL|1|NULL
+|101|1|Sim|Sim|85|54|Sim|Propriedade|Duas Semanas|Sim|uytreth|NULL|1|NULL
+|102|1|Sim|Não|22|12|Sim|Propriedade|Duas Semanas|Sim|hjgtujb|NULL|1|NULL
+|103|1|Sim|Não|25|65|Sim|Propriedade|Duas Semanas|Sim|jhftu|NULL|1|NULL
+|104|1|Sim|Não|45|5|Sim|Propriedade|Menos de uma Semana|Sim|kjhgfdsaoiug|NULL|1|NULL
+|105|1|Sim|Não|565|45|Sim|Propriedade|Mais de um mês|Sim|gddcg|NULL|1|NULL
+|106|1|Sim|Não|25|5|Sim|Propriedade|Mais de um mês|Sim|hvgy|NULL|1|NULL
+|107|1|Sim|Não|254|100|Sim|Propriedade|Mais de um mês|Sim|iiiiuy|NULL|1|NULL
+|108|1|Sim|Sim|25|8|Sim|Propriedade|Mais de um mês|Sim|hgfd|NULL|1|NULL
+|109|1|Sim|Sim|41|4|Sim|Propriedade|Duas Semanas|Sim|hahgshaja|NULL|1|NULL
+|110|1|Sim|Não|52|25|Sim|Propriedade|Duas Semanas|Sim|jhfdsryujbv|NULL|1|NULL
+|111|1|Sim|Sim|42|40|Sim|Propriedade|Duas Semanas|Sim|teste|NULL|1|NULL
+|112|1|Sim|Sim|54|25|Sim|Propriedade|Mais de um mês|Sim|teste Android teste|NULL|1|NULL
+|113|1|Sim|Sim|25|5|Sim|Propriedade|Duas Semanas|Sim|jhfsty|NULL|1|NULL
+|114|1|Sim|Não|25|5|Sim|Propriedade|Mais de um mês|Sim|jjftyj|NULL|1|NULL
+|115|1|Sim|Sim|2|1|Sim|Propriedade|Menos de uma Semana|Sim| |NULL|1|NULL
+|116|1|Sim|Não|5|1|Sim|Propriedade|Duas Semanas|Sim| |NULL|1|NULL
+|118|2|Sim|Não|987|56|Sim|Propriedade|Mais de um mês|Não|teste|NULL|1|2017-10-01
+|119|1|Sim|Não|25|5|Sim|Propriedade|Menos de uma Semana|Não|khfg|NULL|1|NULL
+|120|-1|Sim|Não|5|2|Sim|Propriedade|Duas Semanas|Não|iuhbh|NULL|1|NULL
+|121|1|Sim|Sim|258|56|Sim|Propriedade|Mais de um mês|Sim|jgffv|NULL|1|NULL
+|125|1|Sim|Sim|68|5|Sim|Propriedade|Duas Semanas|Sim|hychjb|NULL|1|NULL
+|126|1|Sim|Não|25|5|Sim|Propriedade|Menos de uma Semana|Sim|jhgbj|NULL|1|NULL
+|127|1|Sim|Não|36|5|Sim|Propriedade|Menos de uma Semana|Sim|ihvhj|NULL|1|NULL
+|128|1|Sim|Não|45|3|Sim|Propriedade|Menos de uma Semana|Sim|dfgdfgdfg| Em produção |1|NULL
+|129|1|Sim|Sim|45|12|Sim|Propriedade|Duas Semanas|Não|morreu e já enterrei o animal |NULL|1|NULL
+|130|2|Sim|Sim|34|3|Sim|Propriedade|Mais de um mês|Não|O animak já está morte a 2 meses, não sei se vai ser possivle fazer a coleta de material para exame| Em produção |2|2017-10-05
+|131|2|Sim|Não|25|5|Não| | |Sim|nada a declarar|NULL|1|2017-10-05
+|132|2|Sim|Sim|26|6|Sim|Propriedade|Menos de uma Semana|Sim|urgente |NULL|1|2017-10-26
+|133|2|Sim|Não|100|8|Sim|Regiões Proximas|Mais de um mês|Sim|Não sei|NULL|1|2017-10-26
+|134|2|Não|Não|50|6|Sim|Regiões Proximas|Menos de uma Semana|Sim|animais na propriedade do Zé morreram com sinais de raiva|NULL|1|2017-10-27
+|135|2|Sim|Sim|89|9|Sim|Propriedade|Menos de uma Semana|Sim|animal morreu com sintomas de raiva, próximo da casa do Oberdan, gostaria de que fossem na propriedade dele pois conheço furna na propriedade dele| Em produção |14|2017-10-27
+|136|1|Sim|Sim|12|5|Não| | |Não|nxkfj|NULL|1|2017-11-13
+|137|1|Sim|Sim|5|2|Não| | |Não|jdkdk|NULL|1|2017-11-13
+|138|1|Sim|Sim|5|2|Não| | |Não|jdkdk|NULL|1|2017-11-13
+|139|1|Sim|Sim|5|8|Não| | |Sim|kkk|NULL|1|2017-11-13
+|140|1|Sim|Sim|5|2|Não| | |Não|kkhh|NULL|1|2017-11-13
+|141|1|Sim|Sim|25|5|Não| | |Não|jdjd|NULL|1|2017-11-13
+|142|1|Sim|Sim|3|2|Sim|Propriedade| |Não|jdk|NULL|1|2017-11-13
+|143|1|Sim|Sim|26|3|Sim|Propriedade|Menos de uma Semana|Sim|Vários animais mordidos.|NULL|1|2017-11-13
+|144|2|Sim|Não|14|4|Sim|Propriedade|Mais de um mês|Sim|Vários animais mordidos. |NULL|1|2017-11-13
+== Estrutura da tabela tipo_abrigo
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_tipo_abrigo**//|int(11)|Não|
+|desc_tipo_abrigo|varchar(50)|Não|
+== Extraindo dados da tabela tipo_abrigo
+
+|1|Oco de Àrvores
+|2|Bueiro
+|3|Casa velha 
+|4|Túnel de Trem
+|5|Cavernas
+|6|Forro de Casa
+|8|Curral
+== Estrutura da tabela tipo_abrigo_solicitacao
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_solicitacao_visita**//|int(11)|Não|
+|//**cod_tipo_abrigo**//|int(11)|Não|
+== Extraindo dados da tabela tipo_abrigo_solicitacao
+
+|63|1
+|64|1
+|65|1
+|70|1
+|72|1
+|76|1
+|77|1
+|82|1
+|88|1
+|89|1
+|90|1
+|91|1
+|111|1
+|112|1
+|113|1
+|114|1
+|115|1
+|116|1
+|121|1
+|128|1
+|133|1
+|135|1
+|143|1
+|144|1
+|63|2
+|65|2
+|73|2
+|76|2
+|79|2
+|82|2
+|87|2
+|89|2
+|90|2
+|91|2
+|63|3
+|73|3
+|76|3
+|78|3
+|80|3
+|81|3
+|83|3
+|88|3
+|89|3
+|111|3
+|112|3
+|113|3
+|114|3
+|115|3
+|116|3
+|121|3
+|127|3
+|128|3
+|132|3
+|143|3
+|144|3
+|112|4
+|116|4
+|125|4
+|127|4
+|139|4
+|111|5
+|113|5
+|115|5
+|131|5
+|134|5
+|135|5
+|125|6
+|127|6
+|131|6
+== Estrutura da tabela uf
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**sigla_UF**//|char(2)|Não|
+|nome_UF|varchar(30)|Não|
+== Extraindo dados da tabela uf
+
+|AM|Amazonas
+|CU|Curitiba
+|ES|Espirito Santo
+|MG|Minas Gerais
+|PA|Pará 
+|PE|Pernambuco
+|PI|Piaui
+|RJ|Rio de Janeiro
+|SC|Santa Catarina
+|SP|São Paulo
+|TO|Tocantins
+== Estrutura da tabela usuario_comum
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_usuario**//|int(11)|Não|
+|nome_usuario|varchar(50)|Não|
+|login|varchar(20)|Sim|NULL
+|senha|varchar(40)|Não|
+|telefone|varchar(15)|Sim|NULL
+|email|varchar(100)|Sim|NULL
+|**cpf**|char(11)|Não|
+|rua|varchar(50)|Não|
+|numero|int(11)|Não|
+|ponto_referencia|varchar(100)|Não|
+|cod_bairro|int(11)|Não|
+|data_cadastro|date|Sim|NULL
+|longitude|decimal(11,8)|Sim|NULL
+|latitude|decimal(10,8)|Sim|NULL
+== Extraindo dados da tabela usuario_comum
+
+|1|Oberdan|oberdan|202cb962ac59075b964b07152d234b70|999999999|oberdan@gmail.com|12312312323|Limeira|4|Perto da igreja|1|2017-08-06|0.00000000|0.00000000
+|2|Luiz|luiz|123|999999999|NULL|1231231231|Teste|98|perto do bar|2|2017-09-01|NULL|NULL
+|3|Andre|andre|1234|999999999|NULL|09876544333|teste|23|adasd asdad asdsad|4|2017-09-04|0.00000000|0.00000000
+|5|Matheus Mauricio|matheusmm|1235|999999999|NULL|87934255433|Columbia|43|re|3|2017-10-01|0.00000000|0.00000000
+|7|Piguimeu Santos|piguimeu|12565|999999999|NULL|89867877800|eeretr|356|lshdflksjjhfdkjs|4|2017-10-04|0.00000000|0.00000000
+|12|teste teste |teste|698dc19d489c4e4db73e28a713eab07b|8888888888|oberdandebona@yahoo..com|12345678955|tesdfr|5|gesf|1|2017-10-06|0.00000000|0.00000000
+|13|João |teste|202cb962ac59075b964b07152d234b70|28999965255|teste@gmail.com|25687588544|teste|5|k|1|2017-10-26|0.00000000|0.00000000
+|14|João Victor|joeao@gmail.com|202cb962ac59075b964b07152d234b70|028999889977|joeao@gmail.com|12376577655|Teste   345|888|Perto de Padaria Brasil 123|3|2017-10-27|0.00000000|0.00000000
+|15|Zé Francisco |josefran|5b1b68a9abf4d2cd155c81a9225fd158|28999058874|Joséfran@gmail.com|2254417896|foi|22|próximo a casa abandonada |1|2017-10-27|0.00000000|0.00000000
+== Estrutura da tabela visita
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**cod_visita**//|int(11)|Não|
+|data_visita|date|Não|
+|cod_funcionario|int(11)|Não|
+|cod_agendamento|int(11)|Não|
+|observacoes|varchar(100)|Não|
+== Extraindo dados da tabela visita
+
+|9|2017-09-28|4|35|jhfgu
+|10|2017-09-28|4|35|teste
+|11|2017-10-01|4|37|teste novo
+|12|2017-10-01|4|39|u Hg fbbh
+|26|2017-10-02|4|42|kkkkkkkkk
+|27|2017-10-02|4|49|ifes
+|28|2017-10-25|4|50|nada
+|29|2017-10-25|4|51|nada
+|30|2017-10-26|4|52|ok
+|31|2017-10-27|4|53|boi morto e cérebro coletado
+|32|2017-11-13|4|54|jd
