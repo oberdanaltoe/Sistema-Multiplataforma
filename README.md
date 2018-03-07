@@ -10,8 +10,12 @@ Os arquivos do banco de dados estão na pasta, Banco-DadosFicticios, a ferrament
 Nesse Sistema possui 3 usuarios distintos, Usuario final, ususario tecnico e Coordenador.
 
 Em cada pasta possui os codigos desses usuários.
+
 Pasta Cliente-Desktop: Coordenador
+
 Pasta Cliente-Android-Tecnico: Usuário Técnico
+OBS: A pasta com os arquivos do usuário tecnico estão neste link, juntamente com o resto dos códigos: https://drive.google.com/drive/folders/1KYyWhIfireESj0_OR0zayqmuEEEonOsC?usp=sharing
+
 Pasta Cliente-Android-UsuarioFinal: Usuário Final
 
 Pasta WebServiceRestFull: WebService
